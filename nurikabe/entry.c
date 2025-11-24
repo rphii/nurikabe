@@ -50,6 +50,9 @@ void entry_register_dir(Entry *entry, Entry_Register_Task *task) {
         entry_register_dispatch(task->pw, task->sync_m, entry, back, path);
     }
     pthread_mutex_unlock(&entry->mtx);
+
+    closedir(dir);
+
 }
 
 void *entry_register_async(Pw *pw, bool *cancel, void *user) {
