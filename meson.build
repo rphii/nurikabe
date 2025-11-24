@@ -2,6 +2,8 @@ project('nurikabe', 'c', meson_version: '>=1.1', version: '0.0.1')
 
 sources = [
   'nurikabe/main.c',
+  'nurikabe/browse.c',
+  'nurikabe/entry.c',
   ]
 
 cc = meson.get_compiler('c')

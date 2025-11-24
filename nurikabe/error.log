@@ -1,0 +1,89 @@
+[?1049h[?1000;1003;1006h[?25l[?25l[1;1H[0m/home/rphii/dev/c/nurikabe/nurikabe                                                                                                                                                                                                                           
+                         /home/rphii/dev/c/nurikabe/nurikabe/main.c                                                                                                                                                                                           
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              [?25h[?1000;1003;1006l[?1049l[?25h[?1000;1003;1006l
+=================================================================
+==10699==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 65632 byte(s) in 2 object(s) allocated from:
+    #0 0x7f3b0d951967 in malloc (/usr/lib/gcc/x86_64-pc-linux-gnu/14/libasan.so.8+0x13f967)
+    #1 0x7f3b0d6233e1 in opendir (/usr/lib64/libc.so.6+0xde3e1)
+
+Direct leak of 464 byte(s) in 2 object(s) allocated from:
+    #0 0x7f3b0d950948  (/usr/lib/gcc/x86_64-pc-linux-gnu/14/libasan.so.8+0x13e948)
+    #1 0x7f3b0d74c6f8 in _array_push (/usr/lib64/librlc.so+0x16f8)
+
+Direct leak of 80 byte(s) in 1 object(s) allocated from:
+    #0 0x7f3b0d950948  (/usr/lib/gcc/x86_64-pc-linux-gnu/14/libasan.so.8+0x13e948)
+    #1 0x7f3b0d743780 in so_heap_grow (/usr/lib64/librlso.so+0x13780)
+
+Direct leak of 36 byte(s) in 1 object(s) allocated from:
+    #0 0x7f3b0d951967 in malloc (/usr/lib/gcc/x86_64-pc-linux-gnu/14/libasan.so.8+0x13f967)
+    #1 0x7f3b0d73df90 in so_dup (/usr/lib64/librlso.so+0xdf90)
+
+Indirect leak of 1488 byte(s) in 6 object(s) allocated from:
+    #0 0x7f3b0d951967 in malloc (/usr/lib/gcc/x86_64-pc-linux-gnu/14/libasan.so.8+0x13f967)
+    #1 0x5594280de112 in entry_register_dir ../nurikabe/entry.c:47
+
+Indirect leak of 267 byte(s) in 6 object(s) allocated from:
+    #0 0x7f3b0d951967 in malloc (/usr/lib/gcc/x86_64-pc-linux-gnu/14/libasan.so.8+0x13f967)
+    #1 0x7f3b0d73df90 in so_dup (/usr/lib64/librlso.so+0xdf90)
+
+SUMMARY: AddressSanitizer: 67967 byte(s) leaked in 18 allocation(s).
